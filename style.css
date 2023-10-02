@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Big+Shoulders+Display:wght@300&family=DM+Sans:ital,opsz,wght@1,9..40,200&family=Epilogue&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@200&family=Inter:wght@200&family=Josefin+Sans:wght@200;300&family=Kumbh+Sans:wght@300;400&family=Lato&family=League+Spartan&family=Lexend+Deca:wght@300;400&family=Libre+Franklin:wght@200&family=Open+Sans&family=Outfit:wght@200&family=Overpass:wght@600&family=Plus+Jakarta+Sans:wght@200&family=Poppins:wght@200;300&family=Red+Hat+Display&family=Rubik:wght@300&family=Space+Mono:wght@700&family=Ubuntu:wght@700&display=swap");
+
+:root {
+  --btn_color: #e74c3c;
+  --txt_color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: linear-gradient(100deg, #008080, #ff6f61);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* container */
+
+.container {
+  width: 400px;
+  min-height: 200px;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+/* heading */
+
+.heading {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+h1 img {
+  width: 2rem;
+}
+
+.input_box {
+  position: relative;
+  background-color: lightgray;
+  padding: 0.8rem 0.1rem;
+  border-radius: 1.5rem;
+}
+
+.input_box input {
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
+  width: 100%;
+}
+.input_box button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--btn_color);
+  color: #fff;
+  transition: opacity 0.2s ease-in-out;
+}
+.input_box button:hover {
+  opacity: 0.8;
+}
+
+/* li */
+
+ul li {
+  list-style: none;
+  padding: 0.5rem 1rem 0.5rem 0.8rem;
+  color: var(--txt_color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-image: url(imgs/unchecked.png);
+  background-size: cover;
+  background-position: center center;
+  transform: translate(-50%, 80%);
+}
+
+ul li.checked:not(span) {
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(imgs/checked.png);
+}
+
+/* span */
+
+.dlt_todo {
+  width: .8rem;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.dlt_todo img{
+  width: 100%;
+}
+.dlt_todo:hover {
+  opacity: .8;
+}
